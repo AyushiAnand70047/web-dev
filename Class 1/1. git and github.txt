@@ -28,3 +28,6 @@ git push -u origin main (push in main branch)
 if main branch does not exist:
 git branch (it will show existing branch)
 git checkout -b main (it will create main branch)
+
+To add collaborators:
+repository settings -> collaborators -> add people (collaborator github name) -> Add to this repository
