@@ -1,0 +1,8 @@
+git -> version control system
+
+git --version
+
+if i want to track the changes in any folder:
+git init (now git will track this folder, one hidden folder .git will be created where changes will be added)
+git add filename (to track individual file inside the folder)
+git add . (all file will be tracked which is inside this folder)
