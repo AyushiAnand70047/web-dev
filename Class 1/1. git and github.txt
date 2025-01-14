@@ -4,5 +4,12 @@ git --version
 
 if i want to track the changes in any folder:
 git init (now git will track this folder, one hidden folder .git will be created where changes will be added)
-git add filename (to track individual file inside the folder)
+git add <filename> (to track individual file inside the folder)
 git add . (all file will be tracked which is inside this folder)
+git status (show tracked and untracked file)
+git commit -m "<commit message>"
+git log (to see the history)
+git diff (to see the changes in folder after commit)
+
+To revert back:
+git log --oneline
