@@ -13,5 +13,9 @@ git diff (to see the changes in folder after commit)
 
 To revert back:
 git log --oneline
+git reset <commit hash> (it uncommit the changes after particular hash but changes will not be deleted from the folder)
+git reset --hard <commit hash> (discard all the changes after particular hash)
 
-revert
+to see the difference between two commit(copy git commit hash)
+git diff <commit hash 1> <commit hash 2>
+press q (to exit)
