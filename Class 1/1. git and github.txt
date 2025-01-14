@@ -13,3 +13,5 @@ git diff (to see the changes in folder after commit)
 
 To revert back:
 git log --oneline
+
+revert
