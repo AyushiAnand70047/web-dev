@@ -19,3 +19,12 @@ git reset --hard <commit hash> (discard all the changes after particular hash)
 to see the difference between two commit(copy git commit hash)
 git diff <commit hash 1> <commit hash 2>
 press q (to exit)
+
+Github:
+create repository on Github
+git remote add origin https://github.com/AyushiAnand70047/web-dev.git (now we can push or pull changes in this repository from terminal)
+git push -u origin main (push in main branch)
+
+if main branch does not exist:
+git branch (it will show existing branch)
+git checkout -b main (it will create main branch)
