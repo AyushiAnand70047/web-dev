@@ -1,0 +1,59 @@
+HTTP(Hypertext Transfer Protocol)
+-> Protocol(set of rules) used to transfer Htext(Hyper link text -> web docs)
+
+All the data which is transferred from HTTP is human readable:
+-> Network tab visibility
+-> Inspect element
+-> Page source
+
+Http is stateless protocol:
+Everytime you visit a page, you are a new user.(No memory for the previous user.)
+
+Session -> stored state between frontend and backend
+
+Cookie(Information)
+
+HTTP Headers(The information which we have to send to browser)
+information like
+-> client
+-> Browser Info
+-> Date Time
+-> Cookie to store
+
+Request Response Model:
+Browser send request to server, server give some response
+
+Type of request(Get, Post, Delete,...)
+
+Response Code(200, 404, 500,...)
+
+-> What action to perform(Get, Post)
+-> Where to perform(http://api.hitesh.ai/auth)
+-> Was it done(200,404,...)
+
+HTTP/2(Http version 2)
+-> http1 is backup for http2 and still it is used
+-> uses compression(server send data in compressed format like zip)
+-> uses multiplexing(Many files at same time)
+-> uses encryption(https -> secure communication layer between browser and server)
+    In AWS, we don't use https for internal communication
+    As in computer every calculation is having some computaion cost.
+
+User Agent(agent which send user request to server like browser)
+TCP(Transmission Control Protocol)
+FTP(File Transfer Protocol)
+IP(Internet Protocol)
+URL(Uniform Resource Locator)
+DNS(Domain Name System) -> points url to IP
+Header(pass additional information)
+Payload(Actual data - email, password)
+Cache(store the data)
+
+Summary:
+Browser <---> Server
+-> setup TCP connection
+-> exchange TLS certificate
+-> send request(like get, post) + URL + Data + more
+-> Get the response back
+   with status code & data(like img, csv, text)
+-> TCP connection is closed(state less)
