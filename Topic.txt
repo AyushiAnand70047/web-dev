@@ -1,1 +1,2 @@
-1. Git and Github
+1. Git and GitHub
+2. Computer Basics
