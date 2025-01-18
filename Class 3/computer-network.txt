@@ -1,0 +1,15 @@
+OSI(Open system interconnect) Model: (Model for data transfer)
+7. Application Layer
+6. Presentation Layer
+5. Session Layer
+4. Transport Layer -> TCP/UDP
+3. Network Layer -> Routing ip addressing
+2. Data Link Layer -> frames
+1. Physical Layer -> Bits 0 1
+
+TCP(Transmission Control Protocol):
+-> Reliable(No data loss over it)
+-> 3 way handshake
+
+DNS(Domain Name System) Server:
+provide ip for domain name
