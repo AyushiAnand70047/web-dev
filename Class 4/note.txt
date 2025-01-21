@@ -1,0 +1,11 @@
+prd.md (md => markdown)
+
+Product Requirements Document:
+-> Objective or Purpose
+-> Scope
+-> Features and Requirements
+-> User stories or Use Cases
+-> Technical Requirements
+-> Design Requirement
+-> Success Metrics
+-> Timeline
