@@ -1,0 +1,11 @@
+Suppose I as a developer working on project in a team. I am having a local machine with some configuration.
+Suppose one more developer is added in that team after 2 to 3 years. Then I have to tell him about every configuration for setting the environment to run the project.
+Suppose the new developer installed which required tools of latest version. Then there are high chances of getting error as both environment is not same.
+Another problem is that, suppose if earlier developer is working on windows but new developer is having MacOs and some tool is for window only then local setup is not possible for that new user.
+Another problem is that, when we will deploy the project on cloud, same setup we have to do on cloud which we have done in the local machine
+
+So, its not possible to replicate environment again and again. So we use docker.
+
+How docker solve this problem?
+we create container in the docker. And all the required setup we will do there only. and we can create multiple copies of this container and can share with our teammate. We can run this container on any machine.
+Each container contains its own operating system and tools.

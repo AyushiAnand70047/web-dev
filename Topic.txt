@@ -1,3 +1,5 @@
-1. Git and GitHub
-2. Computer Basics
-3. HTML
+Class 1. Git and GitHub
+Class 2. Computer Basics
+Class 3. Computer Basics
+Class 4. HTML
+Class 5. CSS

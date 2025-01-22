@@ -1,0 +1,2 @@
+We can download Docker Desktop from docker website.
+In Docker desktop both docker GUI and CLI is included.

@@ -1,0 +1,15 @@
+1. Problem Statement
+2. Installation of Docker CLI and Desktop
+3. Understanding Images v/s Containers
+4. Running Ubuntu Image in Container
+5. Multiple Containers 
+6. Port Mappings
+7. Environment Variables
+8. Dockerization of Node.js Application
+   a. Dockerfile
+   b. Caching Layers
+   c. Publishing to Hub
+9. Docker Compose
+   a. Services
+   b. Port Mapping
+   c. Env Variables

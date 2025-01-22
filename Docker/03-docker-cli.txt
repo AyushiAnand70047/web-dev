@@ -1,0 +1,8 @@
+Open command prompt:
+docker -v (To check docker version)
+
+docker run -it ubuntu (run container in which we want ubuntu image)
+  Now we are inside ubuntu container 
+  if any image is already downloaded, this command will reuse that image and create new container. 
+  if it is not installed, then it install it from hub.docker.com
+  

@@ -1,0 +1,28 @@
+Containers run images, cointainers are isolated with each other.
+
+We can create Custom Image:
+like image having Ubuntu, Node, Mongodb
+we can publish out custom image on docker hub, suppose with name ubuntu-with-tools then anyone can run this on their local container.
+And similarly I can deploy this image on any cloud using container
+
+Some command:
+docker container ls (run this command in terminal)
+ls is used here for listing all the running container
+
+docker container ls -a (list all container)
+
+docker start <name of container> (to start any container)
+docker stop <name of container> (to end any container)
+
+docker exec <container name> ls  (ls result is executed and container is disconnected)
+
+docker exec -it <container name> bash(if we want terminal to get attached with that container)
+
+ctrl + d (to exit)
+
+docker images (to see the images)
+or
+docker image ls
+
+To create container with other image:
+docker run -it node (suppose node image)
