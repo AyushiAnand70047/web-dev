@@ -9,3 +9,6 @@ Product Requirements Document:
 -> Design Requirement
 -> Success Metrics
 -> Timeline
+
+HTML: Hyper text markup language
+Use to make structure of web page
