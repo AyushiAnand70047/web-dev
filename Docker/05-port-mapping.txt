@@ -1,0 +1,18 @@
+Suppose there is a container having Node js server running on port 8000. We know that containers are isolated, when we run this server on browser(http://localhost:8000) it give page not found error.
+
+So, we need to expose the port from container
+docker run -it mailhog/mailhog (it will pull the image from docker hub and run it, it is an email server)
+
+mailhog container, work on port: 8025
+now in browser: localhost:8025 (site can't be reached error), because this port is running inside the container
+
+to expose run command: docker run -it -p 8025:8025 mailhog/mailhog
+now we can run in browser: localhost:8025
+
+we can map container port with my port:
+docker run -it -p 1025:8025 mailhog/mailhog
+(now in browser it will run on port 1025, but in docker it is on 8025)
+
+Environment Variables:
+To pass our own environment variable in docker container(using this we can send some extra data inside docker container):
+docker run -it -p 8025:8025 -e key=value -e key=value mailhog/mailhog
