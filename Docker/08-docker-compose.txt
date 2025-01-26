@@ -7,4 +7,8 @@ So, we can setup muliple container and run it.
 Create file:
 docker-compose.yml
 (inside this we can give our configuration to run multiple container)
-docker compose up
+docker compose up (run services)
+
+docker compose down (will remove everything)
+
+docker compose up -d (detached mode, means run in background)
