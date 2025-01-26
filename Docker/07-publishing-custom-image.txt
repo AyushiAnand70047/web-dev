@@ -1,0 +1,13 @@
+Go to hub.docker.com:
+create account
+after creating account, create repository
+give repository name(suppose nodejs-app)
+now create image with name ayushianand/nodejs-app:
+docker build -t ayushianand/nodejs-app .
+docker login
+username: ayushianand
+password:
+docker push ayushianand/nodejs-app
+
+Anyone can use this image:
+docker pull ayushianand/nodejs-app:latest
