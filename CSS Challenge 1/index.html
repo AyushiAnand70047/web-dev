@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Challenge 1</title>
+    <style>
+        .parent{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(16, 4, 4);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        button{
+            border: none;
+            cursor: pointer;
+            height: 6%;
+            border-radius: 5px;
+            margin: 8px;
+            background-color: rgb(28, 19, 19);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="heading">
+            <h1 id="heading" class="child">Chai Aur Hero Sections</h1>
+        </div>
+        <div class="heading">
+            <button class="child"><a href="./section1.html">Minimal Hero Section</button></a>
+            <button class="child"><a href="./section2.html">Hero Section With Image</a></button>
+        </div>
+    </div>
+</body>
+
+</html>
