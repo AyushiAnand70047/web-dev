@@ -1,0 +1,25 @@
+open cmd and run command:
+cd filePath
+mkdir docker-node
+cd docker-node
+code .
+
+now in vs code docker-node folder:
+first create node js server
+in terminal:
+npm init
+npm i express
+ceate file main.js 
+(write code for creating server in main.js)
+
+create file Dockerfile in docker-node
+In Dockerfile:
+write command for installing node js
+after writing all configuration:
+docker build -t nodejs-app . (to build image)
+
+now to run this image in our own system:
+docker run -it -p 8000:8000 nodejs-app
+
+we can pass value inside container:
+docker run -it -e PORT=4000 -p 4000:4000 nodejs-app
