@@ -1,0 +1,10 @@
+If multiple container is there, we need to run it individually.
+
+In real world, we have multiple container and each having its own port mapping.
+line by line execution of each container is not a good way.
+
+So, we can setup muliple container and run it.
+Create file:
+docker-compose.yml
+(inside this we can give our configuration to run multiple container)
+docker compose up
