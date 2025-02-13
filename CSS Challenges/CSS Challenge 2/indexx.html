@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(17, 16, 16);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .head{
+            text-align: center;
+            margin: 30px;
+        }
+        .head img{
+            margin: 20px;
+            height: 50px;
+        }
+        .head h2{
+            color: rgb(205, 86, 109);
+            margin-bottom: 10px;
+        }
+        .head p{
+            color: rgb(91, 96, 96);
+        }
+        .three-card{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .card{
+            border: 2px solid white;
+            border-radius: 10px;
+            width: 320px;
+            padding: 30px;
+            margin: 30px;
+            line-height: 40px;
+        }
+        .card h3{
+            text-align: center;
+        }
+        .card img{
+            height: 50px;
+        }
+        .price{
+            background-color: rgb(32, 30, 30);
+            width: 250px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .price h1{
+            color: rgb(205, 86, 109);
+        }
+        .price p{
+            color: rgb(62, 60, 60);
+        }
+        button{
+            padding: 8px 16px;
+            border-radius: 5px;
+            border: 2px solid rgb(205, 86, 109);
+            background-color: rgb(17, 16, 16);
+            color: rgb(205, 86, 109);
+            width: 250px;
+        }
+        .card2{
+            background-color: rgb(50, 36, 38);
+            border: 2px solid rgb(205, 86, 109);
+        }
+        .card3{
+            background-color: rgb(69, 64, 42);
+            border: 2px solid rgb(188, 161, 38);
+        }
+        .card3 .price h1{
+            color: rgb(188, 161, 38);
+        }
+        .card3 button{
+            color: rgb(188, 161, 38);
+            border: 2px solid rgb(188, 161, 38);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <img src="./logo/chai-removebg.png">
+        <h2>Chai Aur Fitness</h2>
+        <p>Where wellness meets strength</p>
+    </div>
+    <section class="three-card">
+        <div class="card card1">
+            <h3>Beginner</h3>
+            <img src="./logo/chai-removebg.png">
+            <div class="price">
+                <h1>₹999</h1>
+                <p>MONTHLY</p>
+            </div>
+            <p>✓ Basic Equipment Access</p>
+            <p>✓ Guided Workout Plan</p>
+            <p>✓ Locker Facility</p>
+            <p style="color: rgb(62, 60, 60);;">✘ Personal Training</p>
+            <button>Start Your Journey</button>
+        </div>
+        <div class="card card2">
+            <h3>Warrior</h3>
+            <img src="./logo/chai-removebg.png">
+            <div class="price">
+                <h1>₹1,999</h1>
+                <p>MONTHLY</p>
+            </div>
+            <p>✓ 24/7 Gym Access</p>
+            <p>✓ Personal Training</p>
+            <p>✓ Nutrition Guide</p>
+            <p>✓ Group Classes</p>
+            <button>Become a Warrior</button>
+        </div>
+        <div class="card card3">
+            <h3>Champion</h3>
+            <img src="./logo/chai-removebg.png">
+            <div class="price">
+                <h1>₹3,999</h1>
+                <p>MONTHLY</p>
+            </div>
+            <p>✓ All Warrior Benefits</p>
+            <p>✓ Daily Personal Training</p>
+            <p>✓ Custom Meal Plans</p>
+            <p>✓ Recovery Spa Access</p>
+            <button>Lead the Pack</button>
+        </div>
+    </section>
+</body>
+
+</html>

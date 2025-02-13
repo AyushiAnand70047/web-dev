@@ -2,5 +2,6 @@ Git and GitHub
 Computer Basics
 HTML
 CSS
+JavaScript
 
 Docker
