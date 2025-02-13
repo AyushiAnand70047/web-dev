@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .pricing{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+        .head{
+            display: flex;
+        }
+        .head img{
+            height: 33px;
+        }
+        .detail{
+            display: flex;
+        }
+        .detail img{
+            height: 20px;
+            margin-top: 12px;
+        }
+        .pricing-detail{
+            width: 300px;
+            margin: 20px;
+            padding: 15px;
+            line-height: 40px;
+        }
+        .detail-head{
+            background-color: rgb(241, 121, 15);
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: none;
+        }
+        .pricing-detail:hover{
+            border: 3px solid rgb(241, 121, 15);
+            border-radius: 7px;
+        }
+        button{
+            padding: 8px 16px;
+            background-color: rgb(241, 121, 15);
+            border: none;
+            border-radius: 15px;
+        }
+        p{
+            color: rgb(26, 21, 21);
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <img src="./logo/chai.jpg">
+        <h2>Chai Patti Pricing</h2>
+    </div>
+    <div class="detail-head">
+        <h4>Most Popular</h4>
+    </div>
+    <section class="pricing">
+        <div class="pricing-detail">
+            <h3>Basic</h3>
+            <h2>₹99</h2>
+            <p>per month</p>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>250g of standard tea leaves (single-origin)</p>
+            </div>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>2 sample sachets of flavored tea (10g each)</p>
+            </div>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>Monthly recipie tips for brewing</p>
+            </div>
+            <button>Subscribe Now</button>
+        </div>
+        <div class="pricing-detail">
+            <h3>Premium</h3>
+            <h2>₹199</h2>
+            <p>per month</p>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>500g of premium tea leaves (single-origin or blended options)</p>
+            </div>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>3 sample sachets of exotic tea flavors (15g each)</p>
+            </div>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>Free access to monthly online tea-tasting events</p>
+            </div>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>Priority customer support</p>
+            </div>
+            <button>Subscribe Now</button>
+        </div>
+        <div class="pricing-detail">
+            <h3>Family</h3>
+            <h2>₹399</h2>
+            <p>per month</p>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>1kg of mixed tea leaves (choose up to 3 varieties)</p>
+            </div>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>5 sample sachets of exotic tea flavors (20g each)</p>
+            </div>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>Exclusive recipie booklet</p>
+            </div>
+            <div class="detail">
+                <img src="./logo/chai-cup.png">
+                <p>Free delivery and discounts on additional purchase</p>
+            </div>
+            <button>Subscribe Now</button>
+        </div>
+    </section>
+</body>
+</html>
