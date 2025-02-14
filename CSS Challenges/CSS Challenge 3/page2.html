@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: rgb(69, 66, 66);
+            color: white;
+            padding-top: 2px;
+            height: 65px;
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .head li{
+            display: flex;
+            margin-left: 30px;
+        }
+
+        .head img{
+            height: 31px;
+            background-color: black;
+            border-radius: 50%;
+            border: 2px solid rgb(59, 243, 59);
+            margin-right: 10px;
+        }
+
+        .head h3{
+            color: rgb(59, 243, 59);
+            text-align: center;
+        }
+
+        .list{
+            display: flex;
+            width: 500px;
+            justify-content: space-evenly;
+        }
+
+        .bg-img img{
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .detail{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(35, 34, 34);
+        }
+
+        .detail div{
+            background-color: rgb(60, 57, 57);
+            border-radius: 20px;
+            width: 250px;
+            height: 200px;
+            margin: 70px;
+            padding-top: 25px;
+            text-align: center;
+        }
+
+        .detail h2{
+            color: rgb(59, 243, 59);
+        }
+
+        .detail img{
+            height: 70px;
+        }
+
+        .detail p{
+            padding: 15px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <div class="head">
+                <li>
+                    <img src="./images/chai-removebg.png">
+                    <h3>Chai Cohort</h3>
+                </li>
+            </div>
+            <div class="list">
+                <li>Courses</li>
+                <li>Mentors</li>
+                <li>Join Now</li>
+            </div>
+        </ul>
+    </nav>
+    <section class="bg-img">
+        <img src="./images/bg1.webp">
+        <div class="centered" style="display: none;">
+            Web dev cohort
+        </div>
+    </section>
+    <section class="detail">
+        <div>
+            <img src="./images/chai-removebg.png">
+            <h2>Live Classes</h2>
+            <p>Build production ready applications</p>
+        </div>
+        <div>
+            <img src="./images/chai-removebg.png">
+            <h2>Real Project</h2>
+            <p>Build production ready applications</p>
+        </div>
+        <div>
+            <img src="./images/chai-removebg.png">
+            <h2>Carrer Support</h2>
+            <p>Build production ready applications</p>
+        </div>
+    </section>
+</body>
+</html>
