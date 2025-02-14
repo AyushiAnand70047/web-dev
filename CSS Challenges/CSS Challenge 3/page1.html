@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaiPatti</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+        }
+
+        .nav-head{
+            display: flex;
+            align-items: center;
+            color: saddlebrown;
+        }
+
+        .nav-list{
+            display: flex;
+        }
+
+        a{
+            color:  saddlebrown;
+            text-decoration: none;
+        }
+
+        .nav-head img {
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgb(70, 68, 68);
+            border: 2px solid saddlebrown;
+            margin-right: 8px;
+            margin-left: 40px;
+        }
+
+        .nav-list li{
+            margin-right: 40px;
+            margin-top: 10px;
+        }
+
+        .bg-img img {
+            width: 100%;
+            height: 550px;
+            filter: brightness(50%);
+        }
+
+        .bg-img {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centered h1{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .centered p{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .centered button{
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: none;
+            background-color: saddlebrown;
+            color: white;
+        }
+
+        .collection{
+            margin-top: 40px;
+            text-align: center;
+            color: saddlebrown;
+        }
+
+        .collections{
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(3,350px);
+        }
+
+        .collections div{
+            margin: 30px;
+            padding: 40px;
+            box-shadow: 0 0 0 2px rgb(243, 236, 236);
+            width: 250px;
+            height: 250px;
+        }
+
+        .collections img{
+            height: 40px;
+        }
+
+        .collections div p{
+            margin-top: 15px;
+            color: rgb(147, 143, 143);
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <nav>
+            <ul class="nav">
+                <div class="nav-head">
+                    <li>
+                        <img src="./images/chai-removebg.png">
+                    </li>
+                    <li>
+                        <h3>ChaiPatti</h3>
+                    </li>
+                </div>
+                <div class="nav-list">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Teas</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+        <section class="bg-img">
+            <img src="./images/Tea.jpg">
+            <div class="centered">
+                <h1>Experience the perfect cup</h1>
+                <p>Handcrafted teas from the finest garden of India</p>
+                <button>Shop Now</button>
+            </div>
+        </section>
+        <section class="collection">
+            <h1>Our Premium Collection</h1>
+            <div class="collections">
+                <div>
+                    <img src="./images/chai-removebg.png">
+                    <h3>Darjeling Tea</h3>
+                    <p>Known as the Champagne of teas grown in the hills of Darjelling</p>
+                </div>
+                <div>
+                    <img src="./images/chai-removebg.png">
+                    <h3>Assam Tea</h3>
+                    <p>Rich, bold, and malty tea from the Assam region of India.</p>
+                </div>
+                <div>
+                    <img src="./images/chai-removebg.png">
+                    <h3>Kashmiri Kahwa</h3>
+                    <p>Traditional green tea infused with saffron, almonds, and spices.</p>
+                </div>
+                <div>
+                    <img src="./images/chai-removebg.png">
+                    <h3>Sikkim Tea</h3>
+                    <p>Floral and fruity tea from the Temi tea Garden in Sikkim</p>
+                </div>
+                <div>
+                    <img src="./images/chai-removebg.png">
+                    <h3>Nilgiri Tea</h3>
+                    <p>Pragrant and strong tea from the Nilgiri Hills of Tamil Nadu.</p>
+                </div>
+                <div>
+                    <img src="./images/chai-removebg.png">
+                    <h3>Masala Chai</h3>
+                    <p>Aromatic tea brewed with spices like cardamon, ginger, and cloves.</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</body>
+
+</html>
