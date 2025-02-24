@@ -11,11 +11,11 @@ console.log(fruits[0]);
 fruits[0] = "Kiwi";
 console.log(fruits);
 
-// add item in starting
+// add item in last
 fruits.push("blue berry");
 console.log(fruits);
 
-// add item in last
+// add item in starting
 fruits.unshift("dragon fruit");
 console.log(fruits);
 
