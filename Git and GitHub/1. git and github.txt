@@ -31,3 +31,7 @@ git checkout -b main (it will create main branch)
 
 To add collaborators:
 repository settings -> collaborators -> add people (collaborator github name) -> Add to this repository
+
+Permanently delete any commit from GitHub:
+git reset --hard HEAD~1  (head point to the commit just before the commit which we want to delete)
+git push origin --force
