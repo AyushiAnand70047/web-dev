@@ -9,3 +9,11 @@ var age = 20;
 
 // if age is defined before initilisation: ReferenceError: Cannot access 'age' before initialization (let is hoist but case of Temproral dead zone => age is unreachable)
 // let age = 20;
+
+
+// function is not undefined if it is not store in variable
+test();
+
+function test(){
+    console.log("This is test function");
+}
