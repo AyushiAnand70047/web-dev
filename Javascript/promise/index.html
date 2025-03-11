@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="items"></ul>
+
+    <script>
+        // Promise => it return promise if data is not available in real time, to perform asynchronous operation we need promise
+
+        // stage of promise: pending(when promise is created, and operation has not started yet), fullfilled(operation is successful), rejected(error occurs during operation)
+
+        const items = document.getElementById('items')
+
+        function renderToScreen(obj){
+            const products = obj.data.data;
+            products.forEach((product) => {
+                const li = document.createElement('li');
+                li.innerText = product.title;
+                items.appendChild(li);
+            })
+        }
+
+        fetch('https://api.freeapi.app/api/v1/public/randomproducts')
+            .then((response) => {
+                return response.json()
+            }).then(renderToScreen)
+            .catch((error) => { console.log("Error in api call: ",error) })
+            .finally(() => { })
+    </script>
+</body>
+
+</html>
