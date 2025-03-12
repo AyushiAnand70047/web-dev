@@ -36,10 +36,14 @@ function negativeIndex(arr){
     })
 }
 
-const proxyArray = negativeIndex(arr)
+// const proxyArray = negativeIndex(arr)
+
+// if we want on change in proxyArray our original array does not changed
+const proxyArray = negativeIndex([...arr])
 
 console.log(proxyArray[-1]) // get the value
 
 proxyArray[-1] = 10 // set the value
 
-console.log(arr[arr.length-1])
+console.log(arr)
+console.log(proxyArray)
