@@ -1,6 +1,7 @@
-const { rejects } = require('assert')
+// Promisification => converting legacy callback code to support promise
+
+
 const fs = require('fs')
-const { resolve } = require('path')
 
 function readFileWithPromise(filePath,encoding){
     return new Promise((resolve,reject)=>{
