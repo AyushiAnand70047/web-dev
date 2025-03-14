@@ -3,43 +3,59 @@
 
 const fs = require('fs')
 
-function readFileWithPromise(filePath,encoding){
-    return new Promise((resolve,reject)=>{
-        fs.readFile(filePath,encoding, (err,content)=>{
-            if(err){
+function readFileWithPromise(filePath, encoding) {
+    return new Promise((resolve, reject) => {
+        fs.readFile(filePath, encoding, (err, content) => {
+            if (err) {
                 reject(err)
-            } else{
+            } else {
                 resolve(content)
             }
         })
     })
 }
 
-function writeFileWithPromise(filePath,content){
-    return new Promise((resolve,reject) => {
-        fs.writeFile(filePath,content, (err) => {
-            if(err){
+function writeFileWithPromise(filePath, content) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(filePath, content, (err) => {
+            if (err) {
                 reject(err)
-            } else{
+            } else {
                 resolve()
             }
         })
     })
 }
 
-function unlinkWithPromise(filePath){
-    return new Promise((resolve,reject) => {
+function unlinkWithPromise(filePath) {
+    return new Promise((resolve, reject) => {
         fs.unlink(filePath, (err) => {
-            if(err){
+            if (err) {
                 reject(err)
-            } else{
+            } else {
                 resolve()
             }
         })
     })
 }
 
-readFileWithPromise('file1.txt','utf-8')
-    .then(content => writeFileWithPromise('backup.txt',content))
+// Multiple Async code is running in sync fashion
+readFileWithPromise('file1.txt', 'utf-8')
+    .then(content => writeFileWithPromise('backup.txt', content))
     .then(() => unlinkWithPromise('file1.txt'))
-    .catch( (err) => console.log(err))
+    .catch((err) => console.log(err))
+
+// async await increases the readability of code, await return when promise gets resolved
+async function doTasks() {
+    try {
+        const fileContent = await readFileWithPromise('file1.txt', 'utf-8');
+        await writeFileWithPromisewriteFileWithPromise('backup.txt', fileContent);
+        await unlinkWithPromise('file1.txt');
+    } catch (err) {
+        console.log("Error: ", err)
+    } finally {
+        console.log("All done")
+    }
+}
+
+// doTasks().then(() => console.log("All done"))
