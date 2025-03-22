@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 50%;
+    height: 30%;
+    text-align: center;
+}
+
+#timeInput, #startButton{
+    padding: 8px 16px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#startButton{
+    cursor: pointer;
+    margin-left: 10px;
+}
