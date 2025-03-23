@@ -1,0 +1,17 @@
+npm => node package manager
+npm init => initiliase
+
+env => we can kept all sensitive information
+
+npm install express
+
+npm install nodemon (nodemon monitor node and whenever its needed it restart the server)
+
+npm install -D  nodemon (devDependencies)
+
+npm run <name of script>
+npm run start (start the server)
+
+npm install dotenv
+
+Remaining: 1 hour 4 min
