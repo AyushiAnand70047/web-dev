@@ -14,4 +14,13 @@ npm run start (start the server)
 
 npm install dotenv
 
-Remaining: 1 hour 4 min
+cors => cross origin resource sharing
+npm install cors
+
+database: mongodb
+npm i mongoose
+
+signup mongodb atlas
+network access => allow access from anywhere(0.0.0)
+clusters -> connect -> drivers -> copy mongodb url
+cluster0 -> collections
