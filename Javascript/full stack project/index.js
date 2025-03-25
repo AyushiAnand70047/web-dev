@@ -3,6 +3,9 @@ import dotenv from "dotenv"
 import cors from "cors"
 import db from "./utils/db.js";
 
+// import all routes
+import userRoutes from "./routes/user.routes.js"
+
 dotenv.config()
 
 const app = express();
@@ -33,7 +36,9 @@ app.get("/tauqueer",(req,res)=>{
 })
 
 // connect to db
-db()
+db();
+
+app.use("/api/v1/users",userRoutes)
 
 app.listen(port, () => {
     console.log(`app listening on port ${port}`);
