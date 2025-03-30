@@ -24,3 +24,11 @@ signup mongodb atlas
 network access => allow access from anywhere(0.0.0)
 clusters -> connect -> drivers -> copy mongodb url
 cluster0 -> collections
+
+npm i nodemailer (to send mail to user)
+
+npm i bcrypt (to store hashed password in database)
+
+npm i jsonwebtoken
+
+npm i cookie-parser
