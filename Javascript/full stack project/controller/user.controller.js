@@ -145,7 +145,8 @@ const login = async (req, res) => {
         }
 
         const token = jwt.sign({id: user._id},
-            "shhhhh", {
+
+            process.env.JWT_SECRET, {
                 expiresIn: '24h'
             }
         )
@@ -173,4 +174,61 @@ const login = async (req, res) => {
     }
 }
 
-export { registerUser, verifyUser, login }
+const getUser = async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).select('-password')
+
+        if(!user){
+            return res.status(400).json({
+                success: false,
+                message: "User not found"
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            user
+        })
+    } catch(error) {}
+}
+
+const logoutUser = async (req, res) => {
+    try {
+        res.cookie('token','',{})
+        res.status(200).json({
+            success: true,
+            message: "Logged out successfully"
+        })
+    } catch(error) {}
+}
+
+const forgotPassword = async (req, res) => {
+    try {
+        // get email
+        // find user by email
+        // if user found, reset token + reset expiry( Date.now() + 10*60*1000), user.save()
+        // send mail => design url
+
+    } catch(error) {}
+}
+
+const resetPassword = async (req, res) => {
+    try {
+        // collect token from params
+        // password from req.body
+        const {token} = req.params
+        const {password} = req.body
+
+        try {
+            const user = await User.findOne({
+                resetPasswordToken: token,
+                resetPasswordExpires: {$gt: Date.now()}
+            })
+            // set password in user
+            // resetToken, resetExpiry => reset
+            // save
+        } catch(error) {}
+    } catch(error) {}
+}
+
+export { registerUser, verifyUser, login, getUser, logoutUser, forgotPassword, resetPassword }
