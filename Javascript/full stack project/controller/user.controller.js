@@ -122,6 +122,7 @@ const verifyUser = async (req, res) => {
 const login = async (req, res) => {
     const {email, password} = req.body;
 
+
     if(!email || !password){
         return res.status(400).json({
             message: "All fields are required"
@@ -136,7 +137,13 @@ const login = async (req, res) => {
             })
         }
 
-        const isMatch = bcrypt.compare(password, user.password)
+        console.log(email)
+        console.log(password)
+        console.log(user)
+        console.log(user.password)
+
+        const isMatch = await bcrypt.compare(password, user.password)
+        console.log(isMatch)
 
         if(!isMatch){
             return res.status(400).json({
@@ -178,6 +185,8 @@ const getUser = async (req, res) => {
     try {
         const user = await User.findById(req.user.id).select('-password')
 
+        console.log(user)
+
         if(!user){
             return res.status(400).json({
                 success: false,
@@ -189,7 +198,12 @@ const getUser = async (req, res) => {
             success: true,
             user
         })
-    } catch(error) {}
+    } catch(error) {
+        console.log(error)
+        return res.status(400).json({
+            success: false
+        })
+    }
 }
 
 const logoutUser = async (req, res) => {
@@ -205,11 +219,53 @@ const logoutUser = async (req, res) => {
 const forgotPassword = async (req, res) => {
     try {
         // get email
-        // find user by email
-        // if user found, reset token + reset expiry( Date.now() + 10*60*1000), user.save()
-        // send mail => design url
+        const email = req.body.email
 
-    } catch(error) {}
+        // find user by email
+        const user = await User.findOne({email})
+        if(!user){
+            return res.status(400).json({
+                success: false,
+                message: "User not found"
+            })
+        }
+
+        // if user found, reset token + reset expiry( Date.now() + 10*60*1000), user.save()
+        const token = crypto.randomBytes(32).toString("hex")
+        user.resetPasswordToken = token
+        user.resetPasswordExpires = Date.now() + 10*60*60
+        await user.save()
+
+        // send mail => design url
+        var transporter = nodemailer.createTransport({
+            host: process.env.MAILTRAP_HOST,
+            port: process.env.MAILTRAP_PORT,
+            auth: {
+                user: process.env.MAILTRAP_USER,
+                pass: process.env.MAILTRAP_PASSWORD
+            }
+        });
+
+        const mailOption = {
+            from: process.env.MAILTRAP_SENDERMAIL,
+            to: user.email,
+            subject: "Reset your password",
+            text: "Please click on the following link:",
+            html: `${process.env.BASE_URL}:${process.env.PORT}/api/v1/users/resetpassword/${token}">Reset your password`,
+        };
+        await transporter.sendMail(mailOption)
+
+        // send success status to user
+        res.status(201).json({
+            message: "mail sent successfully",
+            success: true
+        })
+
+    } catch(error) {
+        res.status(400).json({
+            error
+        })
+    }
 }
 
 const resetPassword = async (req, res) => {
@@ -219,16 +275,43 @@ const resetPassword = async (req, res) => {
         const {token} = req.params
         const {password} = req.body
 
+        console.log(token)
+        console.log(password)
+
         try {
             const user = await User.findOne({
                 resetPasswordToken: token,
                 resetPasswordExpires: {$gt: Date.now()}
             })
+
+            if(!user){
+                console.log("User not found")
+            }
+
             // set password in user
+            user.password = password
+
             // resetToken, resetExpiry => reset
+            user.resetPasswordToken = undefined
+            user.resetPasswordExpires = undefined
+
             // save
-        } catch(error) {}
-    } catch(error) {}
+            await user.save()
+
+            res.status(200).json({
+                success: true,
+                message: "password reset done"
+            })
+        } catch(error) {
+            res.status(400).json({
+                message: "Error in reset password"
+            })
+        }
+    } catch(error) {
+        res.status(400).json({
+            message: "Error in getting token and password from user"
+        })
+    }
 }
 
 export { registerUser, verifyUser, login, getUser, logoutUser, forgotPassword, resetPassword }

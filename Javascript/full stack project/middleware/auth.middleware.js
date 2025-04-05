@@ -16,8 +16,7 @@ export const isLoggedIn = async (req,res, next) => {
         console.log("decoded data: ",decoded)
         req.user = decoded
 
-        next()
-
+        next();
     } catch(error) {
         console.log("Auth middleware failure")
         return res.status(500).json({
@@ -25,6 +24,4 @@ export const isLoggedIn = async (req,res, next) => {
             message: "Internal server error"
         })
     }
-
-    next();
 };
