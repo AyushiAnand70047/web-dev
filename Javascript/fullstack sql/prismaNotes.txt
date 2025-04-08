@@ -1,0 +1,14 @@
+Prisma Setup:
+npx prisma init --datasource-provider postgresql
+
+env file:
+DATABASE_URL = "postgresql://<username>:<password>@<host>:<port>/<database>
+
+Prisma Migrations:
+npx prisma migrate dev
+
+Prisma deploy:
+npx prisma migrate deploy
+
+Formating:
+npx prisma format
